@@ -29,6 +29,13 @@
 
       <v-btn
         text
+        @click="goToConnect()"
+      >
+        CONNECT BACKEND
+      </v-btn>
+
+      <v-btn
+        text
         @click="goToManage()"
       >
         หน้าจัดการข้อมูล
@@ -62,6 +69,9 @@ export default {
     },
     goToManage () {
       this.$router.push({ path: '/manageTable'}).catch(() => {})
+    },
+    goToConnect () {
+      this.$router.push({ path: '/manageConnect'}).catch(() => {})
     }
 
   }
